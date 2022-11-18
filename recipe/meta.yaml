@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.0.2" %}
 
 package:
   name: go-md2man
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://github.com/cpuguy83/go-md2man/archive/v{{ version }}.tar.gz
-  sha256: 50537880d42fc28b9c2e9aaa36b137349d43cc73d46436a499f8c928cd2fc576
+  sha256: 2f52e37101ea2734b02f2b54a53c74305b95b3a9a27792fdac962b5354aa3e4a
 
-build: 
+build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
-requirements: 
+requirements:
   build:
     - {{ compiler('go') }}
     - go >=1.11
