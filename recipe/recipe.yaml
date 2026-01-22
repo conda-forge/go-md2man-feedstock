@@ -1,34 +1,34 @@
-{% set version = "2.0.0" %}
+schema_version: 1
+
+context:
+  version: 2.0.0
 
 package:
   name: go-md2man
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/cpuguy83/go-md2man/archive/v{{ version }}.tar.gz
+  url: https://github.com/cpuguy83/go-md2man/archive/v${{ version }}.tar.gz
   sha256: 50537880d42fc28b9c2e9aaa36b137349d43cc73d46436a499f8c928cd2fc576
 
-build: 
-  number: 0
-  skip: True  # [win]
+build:
+  number: 1
+  skip: win
 
-requirements: 
+requirements:
   build:
-    - {{ compiler('go') }}
+    - ${{ compiler('go') }}
     - go >=1.11
     - go-licenses
     - make
   host:
   run:
 
-test:
-  commands:
-    - echo ""|go-md2man
+tests:
+  - script:
+      - echo ""|go-md2man
 
 about:
-  home: https://github.com/cpuguy83/go-md2man
-  dev_url: https://github.com/cpuguy83/go-md2man
-  doc_url: https://github.com/cpuguy83/go-md2man
   license: MIT
   license_file:
     - LICENSE.md
@@ -38,6 +38,11 @@ about:
     go-md2man converts standard markdown formatted documents into manpages. It is written purely in Go so as to reduce dependencies on 3rd party libs.
 
     By default, the input is stdin and the output is stdout.
+
+
+  homepage: https://github.com/cpuguy83/go-md2man
+  repository: https://github.com/cpuguy83/go-md2man
+  documentation: https://github.com/cpuguy83/go-md2man
 
 extra:
   recipe-maintainers:
