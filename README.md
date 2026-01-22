@@ -13,9 +13,8 @@ Development: https://github.com/cpuguy83/go-md2man
 
 Documentation: https://github.com/cpuguy83/go-md2man
 
-go-md2man converts standard markdown formatted documents into manpages. It is written purely in Go so as to reduce dependencies on 3rd party libs.
-
-By default, the input is stdin and the output is stdout.
+go-md2man converts standard markdown formatted documents into manpages.
+It is written purely in Go so as to reduce dependencies on 3rd party libs.
 
 Current build status
 ====================
@@ -60,6 +59,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11068&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/go-md2man-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11068&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/go-md2man-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -191,5 +197,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@janjagusch](https://github.com/janjagusch/)
 * [@mbargull](https://github.com/mbargull/)
 
